@@ -25,15 +25,17 @@ fn main() {
 
     for p in (0..400).map(|p| get_pos_2d(p, size)) {
         for pairing in p.get_pairings() {
-            if !visited.contains(&pairing) {
-                let product: u32 = pairing.iter().map(|Point(x, y)| board[*x][*y]).product();
-
-                if product > max {
-                    max = product;
-                }
-
-                visited.insert(pairing);
+            if visited.contains(&pairing) {
+                continue;
             }
+
+            let product: u32 = pairing.iter().map(|Point(x, y)| board[*x][*y]).product();
+
+            if product > max {
+                max = product;
+            }
+
+            visited.insert(pairing);
         }
     }
 
