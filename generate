@@ -1,0 +1,3 @@
+#!/bin/sh
+
+cargo generate -p pe-template -n "$1"

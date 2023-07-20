@@ -1,0 +1,12 @@
+[workspace]
+
+resolver = "2"
+
+members = [
+  "pe-utils",
+  "pe-11"
+]
+
+exclude = [
+  "pe-template/**"
+]
