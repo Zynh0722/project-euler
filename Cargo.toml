@@ -5,7 +5,8 @@ resolver = "2"
 members = [
   "pe-utils",
   "pe-11",
-  "pe-18"
+  "pe-18",
+  "pe-67",
 ]
 
 exclude = [
