@@ -42,6 +42,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "pe-18"
+version = "0.1.0"
+dependencies = [
+ "iter_tools",
+ "pe_utils",
+]
+
+[[package]]
 name = "pe_utils"
 version = "0.1.0"
 
