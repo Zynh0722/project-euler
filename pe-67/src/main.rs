@@ -30,7 +30,7 @@ fn main() {
 
 trait Tree<T>
 where
-    T: Ord + Copy,
+    T: Ord + Clone,
 {
     fn get_below(&self, row: usize, col: usize) -> Option<(T, T)>;
     fn get_max_below(&self, row: usize, col: usize) -> Option<T>;
@@ -38,11 +38,11 @@ where
 
 impl<T> Tree<T> for Vec<Vec<T>>
 where
-    T: Ord + Copy,
+    T: Ord + Clone,
 {
     fn get_below(&self, row: usize, col: usize) -> Option<(T, T)> {
         if row < self.len() - 1 {
-            Some((self[row + 1][col], self[row + 1][col + 1]))
+            Some((self[row + 1][col].clone(), self[row + 1][col + 1].clone()))
         } else {
             None
         }
